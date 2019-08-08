@@ -12,6 +12,14 @@ env:
 # --------------------------
 matrix:
   include:
+  # linux
+  - name: "LINUX"
+    os: linux
+    go: 1.12.7
+    language: python
+    before_install:
+    - sudo apt-get install -y libvirt-dev
+
   # ORIGINAL WORKING VERSION
   - name: "High Sierra (10.13) and xcode9.3"
     os: osx
